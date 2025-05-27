@@ -1,6 +1,6 @@
 from romeo_and_juliet import PLAY
 
-def getWords(text):
+def get_words(text):
     counting = {}
     for line in text.split("\n"):
         for word in line.split(" "):
@@ -12,7 +12,7 @@ def getWords(text):
     return counting
 
 if __name__ == "__main__":
-    counting = getWords(PLAY)
+    counting = get_words(PLAY)
 
     words = [(counting[i],i) for i in counting]
     sorted_words = sorted(words, key = lambda w: w[0],reverse = True)
