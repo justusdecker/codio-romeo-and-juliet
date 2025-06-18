@@ -1,6 +1,6 @@
 from romeo_and_juliet import PLAY
 
-def get_words_frequency(word_array: list[str]) -> list[str]:
+def words_frequency(word_array: list[str]) -> dict[str, int]:
     """ count all words of a given list """
     counting = {}
     for word in word_array:
@@ -27,7 +27,7 @@ def top_n_words(freq: dict[str,int],n: int):
 def main() -> None:
     """ All of the logic will be called from here"""
     words = get_words(PLAY)
-    counting = get_words_frequency(words)
+    counting = words_frequency(words)
     top_n_words(counting,6)
 
 if __name__ == "__main__":
