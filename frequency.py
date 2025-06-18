@@ -28,7 +28,7 @@ def main() -> None:
     """ All of the logic will be called from here"""
     words = get_words(PLAY)
     counting = words_frequency(words)
-    top_n_words(counting,6)
+    top_n_words(counting,50)
 
 if __name__ == "__main__":
     main()
